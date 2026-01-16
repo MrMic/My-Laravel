@@ -1,1 +1,50 @@
-.php-cs-fixer.cache
+# Laravel & PHP
+/vendor/
+/node_modules/
+composer.lock
+.env
+.env.*
+!.env.example
+
+# Laravel specific
+/public/storage
+/storage/*.key
+/storage/app/public
+/storage/framework/cache/data
+/storage/framework/sessions
+/storage/framework/testing
+/storage/framework/views
+/storage/logs
+
+# IDE & OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# NPM / Yarn
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+
+# Cache & compiled files
+bootstrap/cache/*.php
+bootstrap/cache/*.json
+
+# PHPUnit
+.phpunit.result.cache
+
+# Laravel Mix / Vite
+/public/hot
+/public/build
+/public/mix-manifest.json
+/public/vite.svg
+/public/vite.json
+
+# Logs
+*.log
+
+# Misc
+.env.backup
