@@ -9,3 +9,7 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return "This a Home Page.";
 });
+
+Route::get("/user/{id}/{slug}", function ($id, $slug) {
+    return "This is User Page with ID: " . $id . " " . $slug;
+});
