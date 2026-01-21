@@ -2,15 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 
+// ______________________________________________________________________
 Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
-//INFO: ROUTES METHODS ──────────────────────────────────────────────────
-
-
-
-//INFO: FALLBACK ROUTE __________________________________________________
-// Route::fallback(function () {
-//     return "Opps, we couldn't find the page";
-// });
+// ______________________________________________________________________
+Route::get('/contact', function () {
+    return view('contact.index');
+})->name('contact');
