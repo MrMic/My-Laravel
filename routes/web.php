@@ -7,3 +7,10 @@ Route::get('/', function () {
 })->name('home');
 
 //INFO: ROUTES METHODS ──────────────────────────────────────────────────
+
+
+
+//INFO: FALLBACK ROUTE __________________________________________________
+// Route::fallback(function () {
+//     return "Opps, we couldn't find the page";
+// });
