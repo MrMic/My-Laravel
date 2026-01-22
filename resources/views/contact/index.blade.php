@@ -7,10 +7,29 @@
     <title>Document</title>
 </head>
 
+@php
+    $title = "Contact Page";
+@endphp
+
 <body>
-    <h2>Contact Page</h2>
+    {{-- comment --}}
+    <h2>{{ $title }}</h2>
     Urna, ac, adipiscing laoreet eget rutrum dapibus faucibus efficitur pharetra. Ultricies, amet, dui velit blandit
     arcu tincidunt nunc vivamus donec.
 </body>
 
 </html>
+
+{{--
+
+@if()
+@else
+@endif
+
+@for()
+@endfor
+
+@foreach()
+@endforeach
+
+--}}
