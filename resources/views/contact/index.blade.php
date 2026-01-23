@@ -7,29 +7,21 @@
     <title>Document</title>
 </head>
 
-@php
-    $title = "Contact Page";
-@endphp
 
 <body>
     {{-- comment --}}
     <h2>{{ $title }}</h2>
-    Urna, ac, adipiscing laoreet eget rutrum dapibus faucibus efficitur pharetra. Ultricies, amet, dui velit blandit
-    arcu tincidunt nunc vivamus donec.
+    {{ $description }}
+
+    <ul>
+        @foreach ($books as $book)
+            <li>{{ $book }}</li>
+        @endforeach
+
+        {{-- @for ($i = 0; $i < count($books); $i++) --}}
+        {{--     <li>{{ $books[$i] }}</li> --}}
+        {{-- @endfor --}}
+    </ul>
 </body>
 
 </html>
-
-{{--
-
-@if()
-@else
-@endif
-
-@for()
-@endfor
-
-@foreach()
-@endforeach
-
---}}
