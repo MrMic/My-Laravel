@@ -7,6 +7,17 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/about', function () {
+    $title = 'About page!';
+    $description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Nunc vulputate libero et velit interdum, ac aliquet odio mattis.";
+
+    return view('about', [
+        'title' => $title,
+        'description' => $description
+    ]);
+})->name('about');
+
 // ______________________________________________________________________
 Route::get('/contact', function () {
     $title = 'Contact page!';
