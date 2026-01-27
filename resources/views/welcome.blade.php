@@ -18,6 +18,13 @@
         </div>
     </section>
 
-    {{-- INFO: INCLUDE THE GALLERY COMPONENT --}}
+    {{-- INFO: *INCLUDE* THE GALLERY COMPONENT --}}
     @include('gallery')
 @endsection
+
+{{-- INFO: PUSH BACK TO THE *STACK* DIRECTIVE FOR SCRIPTS --}}
+@push('scripts')
+    <script>
+        console.log('Welcome to the Album page!');
+    </script>
+@endpush
