@@ -9,8 +9,10 @@
                     creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it
                     entirely.</p>
                 <p>
-                    <a href="#" class="my-2 btn btn-primary">Main call to action</a>
-                    <a href="#" class="my-2 btn btn-secondary">Secondary action</a>
+                    @if (true)
+                        <a href="#" class="my-2 btn btn-primary">Main call to action</a>
+                        <a href="#" class="my-2 btn btn-secondary">Secondary action</a>
+                    @endif
                 </p>
             </div>
         </div>
