@@ -14,7 +14,8 @@ return new class () extends Migration {
             $table->id();
             $table->string('title', 255);
             $table->text('description');
-            $table->timestamps(); // INFO: created_at & updated_at (2 cols created automatically)
+            $table->boolean('status');
+            // $table->timestamps(); // INFO: created_at & updated_at (2 cols created automatically)
         });
     }
 
