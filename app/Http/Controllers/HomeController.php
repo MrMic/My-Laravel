@@ -3,13 +3,19 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Contracts\View\View;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
     // ______________________________________________________________________
     public function index(): View
     {
+        DB::table('users')->insert([
+            'name' => 'John Doe',
+            'email' => 'john@gmail.fr',
+            'password' => bcrypt('password123'),
+        ]);
+
         return view('welcome');
     }
     // ______________________________________________________________________
