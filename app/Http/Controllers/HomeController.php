@@ -20,8 +20,13 @@ class HomeController extends Controller
 
         // $users = DB::table('users')->get();
         // $users = DB::table('users')->where('id', 5)->first();
-        $users = DB::table('users')->where('id', '>=', 5)->get();
-        return $users;
+        // $users = DB::table('users')->where('id', '>=', 5)->get();
+        // return $users;
+
+        DB::table('users')->where('id', 5)->update([
+            'name' => 'Toto',
+            'email' => 'toto@gmail.fr',
+        ]);
 
         return view('welcome');
     }
