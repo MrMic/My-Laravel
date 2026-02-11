@@ -12,9 +12,13 @@ class HomeController extends Controller
     // ______________________________________________________________________
     public function index(): Collection|View|stdClass
     {
-        // $blogs =  DB::table('blogs')->select('title')->limit(10)->get();
-        $blogs =  DB::table('blogs')->pluck('title', 'id')->toArray();
-        dd($blogs);
+        // $products = DB::table('products')->get();
+        // $products = DB::table('products')->count();
+        // $products = DB::table('products')->max('price');
+        // $products = DB::table('products')->min('price');
+        // $products = DB::table('products')->sum('price');
+        $products = DB::table('products')->avg('price');
+        dd($products);
 
         return view('welcome');
     }

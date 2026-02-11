@@ -15,5 +15,4 @@ class Blog extends Model
     {
         return new BlogFactory($count);
     }
-    //
 }
