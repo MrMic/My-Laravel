@@ -14,11 +14,23 @@ class HomeController extends Controller
     {
         // INFO: ELOQUENT ORM
         // INFO: Create data in DB
-        $user = new User();
-        $user->name = 'Clark';
-        $user->email = 'clark@example.com';
-        $user->password = '123456';
-        $user->save();
+        // $user = new User();
+        // $user->name = 'Clark';
+        // $user->email = 'clark@example.com';
+        // $user->password = '123456';
+        // $user->save();
+
+        // INFO: read data from DB
+        // $users = User::all();
+        // $user = User::where('id', 5)->first();
+        $user = User::find(5);
+        dd($user);
+
+        // foreach ($users as $user) {
+        //     echo $user->name;
+        //     echo "<br>";
+        // }
+
 
         return view('welcome');
     }
