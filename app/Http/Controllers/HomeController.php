@@ -23,8 +23,14 @@ class HomeController extends Controller
         // INFO: read data from DB
         // $users = User::all();
         // $user = User::where('id', 5)->first();
-        $user = User::find(5);
-        dd($user);
+        // $user = User::find(5);
+        // dd($user);
+
+        // INFO: Update data
+        // $user = User::find(6);
+        $user = User::where('id', 6)->first();
+        $user->email = 'clark2@example.com';
+        $user->save();
 
         // foreach ($users as $user) {
         //     echo $user->name;
