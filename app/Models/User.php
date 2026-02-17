@@ -25,6 +25,13 @@ class User extends Authenticatable
     ];
 
     /**
+    * WARN: The attributes that are not mass assignable
+
+     * @var list<string>
+     */
+    // protected $guarded = ['email_verified_at'];
+
+    /**
      * The attributes that should be hidden for serialization.
      *
      * @var list<string>

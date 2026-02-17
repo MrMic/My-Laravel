@@ -12,40 +12,25 @@ class HomeController extends Controller
     // ______________________________________________________________________
     public function index(): Collection|View|stdClass
     {
-        // INFO: ELOQUENT ORM
-        // INFO: Create data in DB
-        // $user = new User();
-        // $user->name = 'Clark';
-        // $user->email = 'clark@example.com';
-        // $user->password = '123456';
-        // $user->save();
+        // INFO: Mass Assignment & fillable (field(s))
+        // User::create([
+        //              'name' => 'User1',
+        //              'email' => 'user1@wp.pl',
+        //              'password' => 'password123'
+        // ]);
 
-        // INFO: read data from DB
-        // $users = User::all();
-        // $user = User::where('id', 5)->first();
-        // $user = User::find(5);
-        // dd($user);
-
-        // INFO: Update data
-        // $user = User::find(6);
-        // $user = User::where('id', 6)->first();
-        // $user->email = 'clark2@example.com';
-        // $user->save();
-
-        // INFO: Delete data
-        $user = User::find(6);
-        // $user = User::findOrFail(6);
-        // $user->delete();
-        // $user = User::find(6)->delete();
-
-
-        dd($user);
-
-        // foreach ($users as $user) {
-        //     echo $user->name;
-        //     echo "<br>";
-        // }
-
+        // User::insert([
+        //     [
+        //         'name' => 'User2',
+        //         'email' => 'user2@wp.pl',
+        //         'password' => 'password123'
+        //     ],
+        //     [
+        //         'name' => 'User3',
+        //         'email' => 'user3@wp.pl',
+        //         'password' => 'password123'
+        //     ],
+        // ]);
 
         return view('welcome');
     }
