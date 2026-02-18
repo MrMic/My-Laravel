@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Product;
 use App\Models\User;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
@@ -12,25 +13,17 @@ class HomeController extends Controller
     // ______________________________________________________________________
     public function index(): Collection|View|stdClass
     {
-        // INFO: Mass Assignment & fillable (field(s))
-        // User::create([
-        //              'name' => 'User1',
-        //              'email' => 'user1@wp.pl',
-        //              'password' => 'password123'
-        // ]);
+        // INFO: Chaining conditions
+        // $product = Product::where('id', '=', 1)->first();
+        // $product = Product::where('id', '=', 1)->where('price', '278')->get();
+        // $product = Product::where(['id' => 1, 'price' => '278'])->get();
+        // $product = Product::where('name', 'LIKE', '%aperiam%')
+        //     ->orWhere('description', 'LIKE', '%distinctio%')
+        //     ->get();
+        // $product = Product::whereIn('id', [1,2,3])->get();
+        $product = Product::whereBetween('price', [100, 200])->get();
 
-        // User::insert([
-        //     [
-        //         'name' => 'User2',
-        //         'email' => 'user2@wp.pl',
-        //         'password' => 'password123'
-        //     ],
-        //     [
-        //         'name' => 'User3',
-        //         'email' => 'user3@wp.pl',
-        //         'password' => 'password123'
-        //     ],
-        // ]);
+        dd($product);
 
         return view('welcome');
     }
