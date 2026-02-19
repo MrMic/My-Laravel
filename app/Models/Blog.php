@@ -8,11 +8,18 @@ use Illuminate\Support\Collection;
 
 class Blog extends Model
 {
+    // ______________________________________________________________________
     /**
      * @param Collection<array-key,mixed> $states
      */
     public static function factory(int $count = null): BlogFactory
     {
         return new BlogFactory($count);
+    }
+
+    // ______________________________________________________________________
+    public function scopeActive($query)
+    {
+        return $query->where('status', 1);
     }
 }
