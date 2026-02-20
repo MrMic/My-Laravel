@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
+use App\Models\Product;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use stdClass;
@@ -12,8 +12,13 @@ class HomeController extends Controller
     // ______________________________________________________________________
     public function index(): Collection|View|stdClass
     {
-        $blogs = Blog::Active()->get();
-        dd($blogs);
+        // Product::find(1)->delete();
+        // $products = Product::all();
+        // $product = Product::withTrashed()->find(1);
+        $product = Product::onlyTrashed()->get();
+
+        // dd($products);
+        dd($product);
 
         return view('welcome');
     }
