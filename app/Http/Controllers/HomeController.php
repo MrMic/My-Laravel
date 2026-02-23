@@ -14,11 +14,17 @@ class HomeController extends Controller
     {
         // Product::find(1)->delete();
         // $products = Product::all();
-        // $product = Product::withTrashed()->find(1);
-        $product = Product::onlyTrashed()->get();
-
         // dd($products);
-        dd($product);
+        //
+        // $product = Product::withTrashed()->find(1);
+        // $product = Product::onlyTrashed()->get();
+        // $product = Product::onlyTrashed()->find(1)->restore();
+
+
+        // $product = Product::find(1)->forceDelete();
+        // $product = Product::find(1);
+
+        // dd($product);
 
         return view('welcome');
     }
