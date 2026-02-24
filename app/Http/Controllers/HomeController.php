@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Product;
 use Illuminate\Contracts\View\View;
 use Illuminate\Support\Collection;
 use stdClass;
