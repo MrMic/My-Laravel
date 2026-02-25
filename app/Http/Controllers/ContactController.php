@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+
 class ContactController extends Controller
 {
     // ______________________________________________________________________
@@ -10,10 +12,9 @@ class ContactController extends Controller
         return view('contact.index');
     }
     // ______________________________________________________________________
-    public function contactSubmit()
+    public function contactSubmit(Request $request)
     {
-        // Handle form submission logic here (e.g., validation, sending email, etc.)
-        // For now, we'll just redirect back to the contact page with a success message.
-        dd("WORKING");
+        // dd($request->all());
+        echo $request->name . '<br>';
     }
 }
