@@ -4,6 +4,15 @@
     <section>
         <div class="row justify-content-center">
             <div class="col-md-6">
+                @if ($errors->any())
+                    <div class="alert alert-danger mt-5 mb-5">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 <div class="mt-5 mb-5 card">
                     <div class="card-body">
                         <form action="{{ route('contact.submit') }}" method="POST">
