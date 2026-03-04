@@ -6,8 +6,7 @@
             <div class="col-md-6">
                 <div class="mt-5 mb-5 card">
                     <div class="card-body ">
-                        <form action="" method="POST">
-                            {{-- <input type="hidden" name="__token" value="{{ csrf_token() }}"> --}}
+                        <form action="{{ route('file-upload.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="">File</label>
