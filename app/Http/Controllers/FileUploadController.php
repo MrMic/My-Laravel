@@ -25,13 +25,15 @@ class FileUploadController extends Controller
         // $file = $request->file('file')->store('/', 'local');
 
         // INFO: dans "storage/app/public/" _________________________________
-        $file = $request->file('file')->store('/', 'public');
+        // $file = $request->file('file')->store('/', 'public');
+        // INFO: dans "public/uploads/" ______________________________________
+        $file = $request->file('file')->store('/', 'dir_public');
 
         $fileStore = new File();
-        $fileStore->file_path = $file;
+        $fileStore->file_path = '/uploads/' . $file;
         $fileStore->save();
 
-        dd('Stored file path: ' . $file);
+        // dd('Stored file path: ' . $file);
     }
 
     // INFO: GET ____________________________________________________________
