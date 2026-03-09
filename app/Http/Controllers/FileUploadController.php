@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\File;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\File as FacadesFile;
 use Illuminate\Support\Facades\Storage;
 use Str;
 
@@ -12,6 +13,13 @@ class FileUploadController extends Controller
     // INFO: GET ____________________________________________________________
     public function index()
     {
+        /*
+                $file = File::find(7);
+                // INFO: Delete from the public directory
+                FacadesFile::delete(public_path($file->file_path));
+                // INFO: Delete from the database
+                $file->delete();
+        */
         $files = File::all();
         return view('file-upload', [
             'files' => $files,
