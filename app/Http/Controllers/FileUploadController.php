@@ -54,7 +54,9 @@ class FileUploadController extends Controller
         $fileStore->file_path = '/uploads/' . $path;
         $fileStore->save();
 
-        // dd('Stored file path: ' . $file);
+        // return redirect()->back()->with('success', 'File uploaded successfully.');
+        // return redirect()->route('home');
+        return redirect()->away('https://www.google.com');
     }
 
     // INFO: GET ____________________________________________________________
