@@ -37,6 +37,12 @@ class FileUploadController extends Controller
         // $file = $request->file('file')->store('/', 'public');
         // INFO: dans "public/uploads/" _____________________________________
 
+        $request->validate([
+            // 'file' => ['required', 'image'],
+            // 'file' => 'required|image',
+            'file' => 'required|file|mimes:jpg,jpeg,png,gif|max:2048', // 2MB max
+        ]);
+
         $file = $request->file('file');
         $ext = $file->getClientOriginalExtension();
         $customName = 'laravel_' . Str::uuid();
